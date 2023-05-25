@@ -7,7 +7,9 @@ body {
   .btn-group{
     margin-right: 5px;
   }
-  
+  a{
+    text-decoration: none;
+  }
   ul{
       margin: 0;
       padding: 0;
@@ -21,6 +23,12 @@ body {
   max-width: 600px;
   background-color: rgba(0 0 0 / 10%)
   
+  }
+  .created{
+    text-align: center;
+    margin-top: -10px;
+    margin-right: 20rem;
+    font-weight: bold;
   }
   .cf{
     font-size: small;
