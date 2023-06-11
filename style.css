@@ -9,6 +9,7 @@ body {
   }
   a{
     text-decoration: none;
+   
   }
   ul{
       margin: 0;
@@ -30,7 +31,9 @@ body {
     margin-right: 20rem;
     font-weight: bold;
   }
-  .cf{
+  .weatherTemp .active{
+    color: rgb(33, 33, 33);
+    cursor: default;
     font-size: small;
   }
   .col{
@@ -43,7 +46,15 @@ body {
   }
   #frsWeatherInfo li {
   margin-top: 6px;
+  line-height: 35px;
   }
   #scdWeatherInfo li {
     margin-top: 6px;
+  }
+  #icon{
+    margin-top: -19px;
+    margin-left: -15px;
+  }
+  #temperature{
+    font-size: larger;
   }

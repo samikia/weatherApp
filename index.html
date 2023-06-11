@@ -48,9 +48,9 @@
                   search
                 </button> -->
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                  <button type="submit"  id="btn-search" class="btn btn-primary rounded-pill">search</button>
+                  <button type="submit"  id="btn-search" class="btn btn-primary ">search</button>
                  
-                  <button type="button" id="current-location-button"class="btn btn-success rounded-pill">current</button>
+                  <button type="button" id="current-location-button"class="btn btn-success ">current</button>
                 </div>
               </div>
             </form>
@@ -61,8 +61,12 @@
                 <div class="col fw-semibold">
                   <h3 id="city">New York</h3>
                   <ul>
-                    <li id="localTime">time</li>
-                   <li > ⛅<span id="temperature"></span> <span class="cf"><a href="#" id="celsius-link">°C</a></span></li>
+                    <ul class="weatherTemp">
+                      <li id="localTime">time</li>
+                     <li> <img src="" alt="" id="icon"
+                      /><span id="temperature"></span> <span class="active"><a href="#" id="celsius-link">°C</a>|
+                        <a href="#" id="fornhit-link">°F</a></span></li>
+                    </ul>
                   </ul>
                 </div>
                 <div class="col" id="frsWeatherInfo">
