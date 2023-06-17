@@ -31,7 +31,6 @@ function formatDay(timesTamp) {
   return days[day];
 }
 function displayForcast(response) {
-  console.log(response.data.daily);
   let forcastElement = document.querySelector("#forcast");
   let forcastHtml =
     ' <div class="row row-cols-1 row-cols-md-5 g-4 text-center">';
@@ -88,7 +87,6 @@ function getForcast(coordinates) {
 }
 
 function currentWeather(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
