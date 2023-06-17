@@ -44,18 +44,25 @@
                 />
               </div>
               <div class="col-3">
-                <!-- <button type="submit" class="btn btn-primary mb-3 rounded-pill" id="btn-search">
-                  search
-                </button> -->
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                  <button type="submit"  id="btn-search" class="btn btn-primary ">search</button>
-                 
-                  <button type="button" id="current-location-button"class="btn btn-success ">current</button>
+                <div
+                  class="btn-group"
+                  role="group"
+                  aria-label="Basic mixed styles example"
+                >
+                  <button type="submit" id="btn-search" class="btn btn-primary">
+                    search
+                  </button>
+
+                  <button
+                    type="button"
+                    id="current-location-button"
+                    class="btn btn-success"
+                  >
+                    current
+                  </button>
                 </div>
               </div>
             </form>
-            <!-- <button id="current-location-button" class="btn btn-primary mb-3 rounded-pill">current</button> -->
-            
             <div class="container text-center mb-2">
               <div class="row">
                 <div class="col fw-semibold">
@@ -63,80 +70,50 @@
                   <ul>
                     <ul class="weatherTemp">
                       <li id="localTime">time</li>
-                     <li> <img src="" alt="" id="icon"
-                      /><span id="temperature"></span> <span class="active"><a href="#" id="celsius-link">°C</a>|
-                        <a href="#" id="fornhit-link">°F</a></span></li>
+                      <li>
+                        <img src="" alt="" id="icon" /><span
+                          id="temperature"
+                        ></span>
+                        <span class="active"
+                          ><a href="#" id="celsius-link">°C</a>|
+                          <a href="#" id="fornhit-link">°F</a></span
+                        >
+                      </li>
                     </ul>
                   </ul>
                 </div>
                 <div class="col" id="frsWeatherInfo">
                   <ul>
                     <li>Precipitation: 1%</li>
-                    <li >Humidity:<span id="humidity"></span>%</li>
-                    <li >Wind: <span id="wind"></span> km/h</li>
+                    <li>Humidity:<span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span> km/h</li>
                   </ul>
                 </div>
                 <div class="col" id="scdWeatherInfo">
                   <ul>
                     <li>Weather</li>
-                    
+
                     <li id="description"></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-5 g-4 text-center">
-              <div class="col">
-                <div class="card h-100 rounded-pill">
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold">Thu</h5>
-                    <p class="card-text">27° 15°</p>
-                    <p>⛅</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 rounded-pill">
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold">Fri</h5>
-                    <p class="card-text">31° 19°</p>
-                    <p>⛅</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 rounded-pill">
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold">Stu</h5>
-                    <p class="card-text">27° 14°</p>
-                    <p>☁️</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 rounded-pill">
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold">Sun</h5>
-                    <p class="card-text">24° 13°</p>
-                    <p>⛅</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100 rounded-pill">
-                  <div class="card-body">
-                    <h5 class="card-title fw-semibold">Mon</h5>
-                    <p class="card-text">23° 14°</p>
-                    <p>☀️</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="weather-forcast" id="forcast"></div>
           </div>
         </div>
       </div>
-        <p class="created"><span><a target="_blank" href="https://github.com/samikia/weatherApp">open source code</a></span> ,by Samira Kian</p>
     </div>
+
+    <span>
+      <p class="created">
+        <span
+          ><a target="_blank" href="https://github.com/samikia/weatherApp"
+            >open source code</a
+          ></span
+        >
+        ,by Samira Kian
+      </p>
+    </span>
     <script src="app.js"></script>
   </body>
 </html>
