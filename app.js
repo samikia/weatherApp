@@ -88,6 +88,7 @@ function getForcast(coordinates) {
 }
 
 function currentWeather(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -98,7 +99,7 @@ function currentWeather(response) {
   celsuisTemp = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = celsuisTemp;
   cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].main;
+  descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatData(response.data.dt * 1000);
@@ -133,25 +134,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function showFornhitTemp(event) {
-  event.preventDefault();
-  let farenhitTemp = (celsuisTemp * 9) / 5 + 32;
-  celsuisLink.classList.remove("active");
-  fornhitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(farenhitTemp);
-}
-
-function showCeleciousTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsuisLink.classList.add("active");
-  fornhitLink.classList.remove("active");
-  temperatureElement.innerHTML = celsuisTemp;
-}
-
-let celsuisTemp = null;
-
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", handleSubmit);
 
@@ -160,9 +142,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
 
-let celsuisLink = document.querySelector("#celsius-link");
-celsuisLink.addEventListener("click", showCeleciousTemp);
-
-let fornhitLink = document.querySelector("#fornhit-link");
-fornhitLink.addEventListener("click", showFornhitTemp);
 ///////////////////////////////////////////////////////////

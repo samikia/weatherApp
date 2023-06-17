@@ -35,6 +35,7 @@ ul {
 }
 .col {
   font-weight: bolder;
+  margin-top: 0;
 }
 ul li {
   margin: 0px;
@@ -49,11 +50,10 @@ ul li {
   text-align: center;
 }
 #frsWeatherInfo li {
-  margin-top: 6px;
   line-height: 35px;
 }
 #scdWeatherInfo li {
-  margin-top: 6px;
+  line-height: 35px;
 }
 #icon {
   margin-top: -19px;
