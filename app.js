@@ -33,8 +33,8 @@ function formatDay(timesTamp) {
 function displayForcast(response) {
   let forcastElement = document.querySelector("#forcast");
   let forcastHtml =
-    ' <div class="row row-cols-1 row-cols-md-5 g-4 text-center">';
-
+    // ' <div class="row row-cols-1 row-cols-md-5 g-4 text-center">';
+    ' <div class="d-flex flex-row mb-3 text-center justify-content-around">'
   let forcast = response.data.daily;
 
   forcast.forEach(function (forcastDay, index) {
@@ -42,7 +42,7 @@ function displayForcast(response) {
       forcastHtml =
         forcastHtml +
         `
-    <div class="col">
+    <div class="p2">
       <div class="card h-100 rounded-pill">
         <div class="card-body">
           <h5
@@ -131,13 +131,47 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+function parisTemp(event){
+event.preventDefault()
+let city = document.querySelector("#search-input").value;
+city="paris"
+  searchCity(city);
 
+}
+function lisbonTemp(event){
+  event.preventDefault()
+  let city = document.querySelector("#search-input").value;
+  city="lisbon"
+    searchCity(city);
+  }
+  function tokyoTemp(event){
+    event.preventDefault()
+    let city = document.querySelector("#search-input").value;
+    city="tokyo"
+      searchCity(city);
+    }
+    function osloTemp(event){
+      event.preventDefault()
+      let city = document.querySelector("#search-input").value;
+      city="oslo"
+        searchCity(city);
+      }
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+let paris=document.querySelector('#Paris')
+paris.addEventListener("click",parisTemp)
+
+let lisbon=document.querySelector('#Lisbon')
+lisbon.addEventListener("click",lisbonTemp)
+
+let tokyo=document.querySelector('#Tokyo')
+tokyo.addEventListener("click",tokyoTemp)
+let oslo=document.querySelector('#Oslo')
+oslo.addEventListener("click",osloTemp)
 searchCity("New York");
 
 ///////////////////////////////////////////////////////////
