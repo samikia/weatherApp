@@ -34,7 +34,7 @@ function displayForcast(response) {
   let forcastElement = document.querySelector("#forcast");
   let forcastHtml =
     // ' <div class="row row-cols-1 row-cols-md-5 g-4 text-center">';
-    ' <div class="d-flex flex-row mb-3 text-center justify-content-around">'
+    ' <div class="d-flex flex-row mb-3 text-center justify-content-around flex-wrap">'
   let forcast = response.data.daily;
 
   forcast.forEach(function (forcastDay, index) {
